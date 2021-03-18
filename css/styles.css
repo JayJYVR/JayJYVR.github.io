@@ -86,4 +86,7 @@ body {
     grid-column-end: 5;
     overflow: hidden;
     background-color: steelblue;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
 }
