@@ -1,71 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     overflow: hidden;
-    background-color: black;
+    background-color: whitesmoke;
     margin: 0px;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr 1fr;
-    grid-template-rows:  50px 1fr 50px;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-content: top;
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
-.row1 {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    overflow: hidden;
-    /* background-image: url('../images/stanleyparkaerial.jpg'); */
-    background-color: rgb(41, 179, 14);
+html {
+    font-family: 'Orbitron', sans-serif;
 }
 
-.topbar {
-    display: grid;
-    grid-template-rows: 40px;
-    padding: 5px;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 10px;
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+  }
+  
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 }
 
-.topbar > div {
-    background: #803de4;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    font-size: 24px;
+.header {
+    background-color: #0003cc;
+    color: #06b80f;
+    padding: 15px;
     text-align: center;
 }
-
-.sidebar {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    overflow: hidden;
-    background-color: teal;
-
+  
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.row2 {
-    background-color: rgb(74, 49, 212);
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    overflow: hidden;
-    overflow-y: auto;
+  
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+  
+.menu li:hover {
+    background-color: #0099cc;
 }
 
 .inside {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 1rem;
-    margin: 2rem; */
     justify-content: flex-start;
     align-items: center;
 }
@@ -79,14 +81,10 @@ body {
     color: white;
 }
 
-.row3 {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    overflow: hidden;
-    background-color: steelblue;
-    justify-items: center;
-    align-items: center;
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
     text-align: center;
+    font-size: 12px;
+    padding: 15px;
 }

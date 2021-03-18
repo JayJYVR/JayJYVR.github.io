@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jason's Personal Website">
     <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -11,33 +13,33 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="row1">
-            <div class="topbar">
-                <div><a href="../index.html">Home</a></div>
-                <div>Calendar</div>
-                <div>Bookmarks</div>
-                <div>Blog</div>
-                <div>Photos</div>
-                <div><a class=active href="education.html">Education</a></div>
-                <div>Resume</div>
-                <div><a href="contact.html">Contact</a></div>
-                <div>Photos</div>
-                <div>Wifey</div>
-            </div>
+    <div class="header">
+        <h1>Jasons Webpage</h1>
+    </div>
+    <div class="row">
+        <div class="col-2 menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>Calendar</li>
+                <li>Bookmarks</li>
+                <li>Blog</li>
+                <li>Photos</li>
+                <li><a class=active href="education.html">Education</a></li>
+                <li>Resume</li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>Photos</li>
+                <li>Wifey</li>
+            </ul>
         </div>
-        <div class="sidebar">
-            Sidebar Placeholder
-        </div>
-        <div class="row2">
+        <div class="col-10 content">
             <div class="inside">
-                <div style="align-self:center; width: 80%;"><h1 style="text-align: center;">Education Information</h1></div>
+                <div style="align-self:center; width: 100%;"><h1 style="text-align: center;">Education Information</h1></div>
                 <div><p>Additional Details</p></div>
             </div>
         </div>
-        <div class="row3">
-            <h3>By Jason Haug 2021</h3> 
-        </div>
+    </div>
+    <div class="footer">
+        <h3>By Jason Haug 2021</h3> 
     </div>
 </body>
 </html> 
