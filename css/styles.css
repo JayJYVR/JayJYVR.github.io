@@ -2,10 +2,19 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-    background-color: whitesmoke;
+html, body {
+    font-family: 'Orbitron', sans-serif;
     margin: 0px;
+    background-color: #0099cc;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto;
+    height: 100%;
+    margin-bottom: -50px;
 }
 
 .row::after {
@@ -14,17 +23,17 @@ body {
     display: table;
 }
 
-html {
-    font-family: 'Orbitron', sans-serif;
-}
-
 [class*="col-"] {
     float: left;
     padding: 15px;
     width: 100%;
-  }
+}
   
 @media only screen and (min-width: 768px) {
+    .menu {min-height: 83vh;}
+    .content {min-height: 83vh;}
+    .index {min-height: 80vh;}
+    #footer {position: fixed; bottom: 0; width: 100%; height: 50px;}
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -41,11 +50,15 @@ html {
 
 .header {
     background-color: #0003cc;
-    color: #06b80f;
+    color: #ffffff;
     padding: 15px;
     text-align: center;
 }
-  
+
+.menu {
+    background-color: #0099cc;
+}
+
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -59,32 +72,59 @@ html {
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-  
+
 .menu li:hover {
-    background-color: #0099cc;
+    background-color: #052db1;
+}
+
+.menu a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu a:visited {
+    color: #ffffff;
+}
+
+.content {
+    background-color: #0483ad
 }
 
 .inside {
     display: flex;
     flex-direction: column;
-    height: 100%;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
+.index {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.education {
+    flex-direction: column;
+}
+.contact {
+    flex-direction: row;
+}
 .inside > div {
     background: #1d0da7;
     padding: 1.5rem;
     border-radius: 1rem;
-    height: max-content;
     margin: 5px;
     color: white;
+    flex-grow: 1;
+    min-width: 25%;
+    text-align: center;
 }
 
-.footer {
-    background-color: #0099cc;
+#footer {
+    background-color: #0003cc;
     color: #ffffff;
     text-align: center;
-    font-size: 12px;
-    padding: 15px;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+    font-weight: bold;
 }
