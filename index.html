@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jason's Personal Website">
     <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -11,26 +13,27 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="row1">
-            <div class="topbar">
-                <div>Home</div>
-                <div>Calendar</div>
-                <div>Bookmarks</div>
-                <div>Blog</div>
-                <div>Photos</div>
-                <div>Education</div>
-                <div>Resume</div>
-                <div>Contact</div>
-                <div>Photos</div>
-                <div>Wifey</div>
-            </div>
+<div id="wrapper">
+    <div class="header">
+        <h1>Jasons Webpage</h1>
+    </div>
+    <div class="row">
+        <div class="col-2 menu">
+            <ul>
+                <a class=active href="index.html"><li>Home</li></a>
+                <a href="./pages/calendar.html"><li>Calendar</li></a>
+                <a href="./pages/bookmarks.html"><li>Bookmarks</li></a>
+                <a href="./pages/blog.html"><li>Blog</li></a>
+                <a href="./pages/photos.html"><li>Photos</li></a>
+                <a href="./pages/education.html"><li>Education</li></a>
+                <a href="./pages/resume.html"><li>Resume</li></a>
+                <a href="./pages/contact.html"><li>Contact</li></a>
+                <a href="./pages/photos.html"><li>Photos</li></a>
+                <a href="./pages/wifey.html"><li>Wifey</li></a>
+            </ul>
         </div>
-        <div class="sidebar">
-            Sidebar Placeholder
-        </div>
-        <div class="row2">
-            <div class="inside">
+        <div class="col-10 content">
+            <div class="inside index">
                 <div>Box01</div>
                 <div>Box02</div>
                 <div>Box03</div>
@@ -43,9 +46,10 @@
                 <div>Box10</div>
             </div>
         </div>
-        <div class="row3">
-            Created By Jason Haug 2021
-        </div>
+    </div>
+</div>
+    <div id="footer">
+        Jason Haug 2021 
     </div>
 </body>
 </html> 
