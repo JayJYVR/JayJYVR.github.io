@@ -17,24 +17,85 @@
     </div>
     <div class="row">
         <div class="col-2 menu">
-            <ul>
-                <a href="../index.html"><li>Home</li></a>
-                <a href="../pages/calendar.html"><li>Calendar</li></a>
-                <a href="../pages/bookmarks.html"><li>Bookmarks</li></a>
-                <a href="../pages/blog.html"><li>Blog</li></a>
-                <a href="../pages/pets.html"><li>Pets</li></a>
-                <a href="../pages/education.html"><li>Education</li></a>
-                <a href="../pages/resume.html"><li>Resume</li></a>
-                <a href="../pages/contact.html"><li>Contact</li></a>
-                <a class=active href="../pages/photos.html"><li>Photos</li></a>
-                <a href="../pages/wifey.html"><li>Wifey</li></a>
-            </ul>
+                <a href="../index.html">Home</a>
+                <a href="../pages/calendar.html">Calendar</a>
+                <a href="../pages/bookmarks.html">Bookmarks</a>
+                <a href="../pages/blog.html">Blog</a>
+                <a href="../pages/pets.html">Pets</a>
+                <a href="../pages/education.html">Education</a>
+                <a href="../pages/resume.html">Resume</a>
+                <a href="../pages/contact.html">Contact</a>
+                <a class="active" href="../pages/photos.html">Photos</a>
+                <a href="../pages/wifey.html">Wifey</a>
         </div>
-        <div class="col-10 content">
-            <div class="inside photos">
-                <div><h1>Photos Information</h1></div>
-                <div><p>Additional Details</p></div>
+        <div class="col-10">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="../images/jayco38fdds/20190814_134949.jpg" style="width:100%">
+                    <div class="text">At the Dealership!</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="../images/jayco38fdds/20190830_142653.jpg" style="width:100%">
+                    <div class="text">First Time Setting Up</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="../images/jayco38fdds/20190830_151432.jpg" style="width:100%">
+                    <div class="text">Love the sliding glass door!</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="../images/jayco38fdds/20190929_092331.jpg" style="width:100%">
+                    <div class="text">About to leave for the first time</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="../images/jayco38fdds/20191016_135829.jpg" style="width:100%">
+                    <div class="text">Leaving for winter seasonal spot</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                }
+            </script>
         </div>
     </div>
     <div id="footer">
