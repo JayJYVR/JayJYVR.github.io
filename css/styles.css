@@ -5,7 +5,7 @@
 html, body {
     font-family: 'Orbitron', sans-serif;
     margin: 0px;
-    background-color: #0483ad;
+    background-color: #0003cc;
     overflow-x: hidden;
 }
 
@@ -42,17 +42,29 @@ html, body {
 }
 
 .header {
-    background-color: #0003cc;
-    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     padding: 15px;
-    text-align: center;
-    font-size: 19px;
     height: 50px;
+}
+
+.hditem {
+    /* flex: 0 1 0; */
+    /* flex-basis:content; */
+    /* text-align: center; */
+    font-size: 19px;
+    color: #ffffff;
+}
+
+#menubutton {
+    text-align: left;
 }
 
 .menu {
     display: none;
-    background-color: #0099cc;
 }
 
 .menu ul {
@@ -151,14 +163,24 @@ html, body {
 }
 
 .inside > div {
-    background: #1d0da7;
+    /* background: coral; */
+    display: flex;
     padding: 1.5rem;
     border-radius: 1rem;
-    margin: 5px;
-    color: white;
+    margin: 5px auto;
+    /* color: white; */
     flex-grow: 1;
-    min-width: 25%;
-    text-align: center;
+    min-height: 250px;
+    min-width: 150px;
+    border: 1px ridge red;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside > div > p {
+    margin: 0;
+    /* text-align: center;
+    align-self: center; */
 }
 
 .index {
@@ -175,7 +197,6 @@ html, body {
 }
 
 .footer {
-    background-color: #0003cc;
     color: #ffffff;
     text-align: center;
     font-size: 19px;
