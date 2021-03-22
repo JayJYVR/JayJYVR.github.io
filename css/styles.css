@@ -5,7 +5,7 @@
 html, body {
     font-family: 'Orbitron', sans-serif;
     margin: 0px;
-    background-color: #0003cc;
+    background-color: #0483ad;
     overflow-x: hidden;
 }
 
@@ -23,10 +23,8 @@ html, body {
   
 @media only screen and (min-width: 768px) {
     .row {min-height: 88vh;}
-    /* .menu {min-height: 89vh;} */
     .content {min-height: 88vh;}
     .index {min-height: 88vh;}
-    #footer {position: relative; bottom: 0; width: 100%;}
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -42,25 +40,42 @@ html, body {
 }
 
 .header {
+    background-color: #0003cc;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 15px;
-    height: 50px;
+    padding: 2.5px 15px 2.5px 15px;
 }
 
-.hditem {
-    /* flex: 0 1 0; */
-    /* flex-basis:content; */
-    /* text-align: center; */
+.hditem1 {
+    text-align: left;
     font-size: 19px;
+    min-width: 25%;
+}
+
+.hditem1 a {
+    text-decoration: none;
     color: #ffffff;
 }
 
-#menubutton {
-    text-align: left;
+.hditem2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    min-width: 25%;
+}
+
+.hditem3 {
+    text-align: right;
+    font-size: 19px;
+    color: #ffffff;
+    min-width: 25%;
+}
+
+.hditem3 a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .menu {
@@ -197,11 +212,21 @@ html, body {
 }
 
 .footer {
-    color: #ffffff;
+    background-color: #0003cc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5px 0px 2.5px 0px;
+}
+
+.ftitem1 {
     text-align: center;
-    font-size: 19px;
-    padding: 15px;
-    display: block;
-    font-weight: bold;
-    height: 50px;
+    font-size: 20px;
+    min-width: 100%;
+}
+
+.ftitem1 a {
+    text-decoration: none;
+    color: #ffffff;
 }
