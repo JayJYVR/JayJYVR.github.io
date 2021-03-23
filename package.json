@@ -1,0 +1,22 @@
+{
+  "name": "jayjyvr.github.io",
+  "version": "1.0.0",
+  "description": "JayJ's Website  \r Learning Some Things  \r Trying Out Something New",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayJYVR/JayJYVR.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayJYVR/JayJYVR.github.io/issues"
+  },
+  "homepage": "https://github.com/JayJYVR/JayJYVR.github.io#readme",
+  "dependencies": {
+    "simplestatemanager": "^4.1.1"
+  }
+}
