@@ -2,16 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Program",
-            "request": "launch",
-            "type": "node",
-            "program": "${file}"
+            "type": "vscode-edge-devtools.debug",
+            "request": "attach",
+            "name": "Attach to Microsoft Edge and open the Edge DevTools",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/index.html"
         },
         {
-            "type": "node-terminal",
-            "name": "Create JavaScript Debug Terminal",
+            "type": "vscode-edge-devtools.debug",
             "request": "launch",
-            "cwd": "${workspaceFolder}"
+            "name": "Launch Microsoft Edge and open the Edge DevTools",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/index.html"
         }
     ]
 }
