@@ -9,110 +9,65 @@ html, body {
     overflow-x: hidden;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+.visible {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    /* align-items: center; */
+    width: 100%;
+    height: 100%;
 }
 
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    width: 100%;
-}
-  
-@media only screen and (min-width: 768px) {
-    .row {min-height: 88vh;}
-    .content {min-height: 88vh;}
-    .index {min-height: 88vh;}
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+.visible > div {
+    display: flex;
+    /* flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
 }
 
 .header {
     background-color: #0003cc;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 2.5px 15px 2.5px 15px;
 }
 
-.hditem1 {
-    text-align: left;
-    font-size: 19px;
-    min-width: 25%;
-}
-
-.hditem1 a {
-    text-decoration: none;
+.header > div > a {
     color: #ffffff;
+    font-size: 19px;
+    text-decoration: none;
 }
 
-.hditem2 {
+#hditem1 {
+    min-width: 20%;
+}
+
+#hditem2 {
     text-align: center;
     font-size: 30px;
     color: #ffffff;
-    min-width: 25%;
+    min-width: 20%;
 }
 
-.hditem3 {
+#hditem3 {
     text-align: right;
-    font-size: 19px;
-    color: #ffffff;
-    min-width: 25%;
+    min-width: 20%;
 }
 
-.hditem3 a {
+#footer {
+    background-color: #0003cc;
+    padding: 2.5px 0px 2.5px 0px;
+}
+
+#ftitem1 {
+    text-align: center;
+    font-size: 20px;
+    min-width: 100%;
     text-decoration: none;
     color: #ffffff;
-}
-
-.menu {
-    display: none;
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-  
-.menu a {
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #33b5e5;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.menu a:hover {
-    background-color: #052db1;
-}
-
-.menu a:link {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.menu a:visited {
-    color: #ffffff;
-}
-
-.menu .active {
-    background-color: darkblue;
 }
 
 /* The side navigation menu */
@@ -166,42 +121,77 @@ html, body {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    flex-grow: 1;
+    justify-content: space-evenly;
+    align-items: stretch;
     background-color: #0483ad;
 }
 
-.inside {
+.content > div {
+    background: coral;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: wrap;
-}
-
-.inside > div {
-    /* background: coral; */
-    display: flex;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    margin: 5px auto;
-    /* color: white; */
     flex-grow: 1;
-    min-height: 250px;
-    min-width: 150px;
-    border: 1px ridge red;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    border-radius: 1rem;
+    margin: 10px 10px;
+    color: white;
+    min-height: 200px;
+    min-width: 200px;
+    border: 1px ridge red;
 }
 
-.inside > div > p {
+.content > div > p {
     margin: 0;
-    /* text-align: center;
-    align-self: center; */
 }
 
-.index {
+#index {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+
+
+/* .menu {
+    display: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.menu a {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu a:hover {
+    background-color: #052db1;
+}
+
+.menu a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu a:visited {
+    color: #ffffff;
+}
+
+.menu .active {
+    background-color: darkblue;
+} 
 
 .education {
     flex-direction: column;
@@ -209,24 +199,35 @@ html, body {
 
 .contact {
     flex-direction: row;
-}
+} */
 
-.footer {
-    background-color: #0003cc;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5px 0px 2.5px 0px;
-}
 
-.ftitem1 {
-    text-align: center;
-    font-size: 20px;
-    min-width: 100%;
-}
+/* .row::after {
+    content: "";
+    clear: both;
+    display: table;
+} */
 
-.ftitem1 a {
-    text-decoration: none;
-    color: #ffffff;
-}
+/* [class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+} */
+   
+/* @media only screen and (min-width: 768px) {
+    .row {min-height: 88vh;}
+    .content {min-height: 88vh;}
+    .index {min-height: 88vh;}
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+} */
