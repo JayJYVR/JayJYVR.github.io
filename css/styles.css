@@ -1,206 +1,154 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    font-family: 'Orbitron', sans-serif;
-    margin: 0px;
-    background-color: #0483ad;
-    overflow-x: hidden;
+  font-family: "Orbitron", sans-serif;
+  margin: 0px;
+  background-color: #0483ad;
+  overflow-x: hidden;
 }
 
-.visible {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    /* align-items: center; */
-    width: 100%;
-    height: 100%;
+#mySidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.visible > div {
-    display: flex;
-    /* flex-direction: row;
+#mySidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#mySidenav a:hover {
+  color: #f1f1f1;
+}
+
+#mySidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  #mySidenav {
+    padding-top: 15px;
+  }
+  #mySidenav a {
+    font-size: 18px;
+  }
+}
+
+#visible {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  transition: margin-left 0.5s;
+  padding: 0px 0px 0px 0px;
+}
+
+#visible > div {
+  display: flex;
+  /* flex-direction: row;
     justify-content: space-between;
     align-items: center; */
 }
 
-.header {
-    background-color: #0003cc;
-    /* display: flex; */
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5px 15px 2.5px 15px;
+#header {
+  background-color: #0003cc;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5px 15px 2.5px 15px;
 }
 
-.header > div > a {
-    color: #ffffff;
-    font-size: 19px;
-    text-decoration: none;
+#header > div > a {
+  color: #ffffff;
+  font-size: 19px;
+  text-decoration: none;
 }
 
 #hditem1 {
-    min-width: 20%;
+  min-width: 20%;
 }
 
 #hditem2 {
-    text-align: center;
-    font-size: 30px;
-    color: #ffffff;
-    min-width: 20%;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  min-width: 20%;
 }
 
 #hditem3 {
-    text-align: right;
-    min-width: 20%;
-}
-
-#footer {
-    background-color: #0003cc;
-    padding: 2.5px 0px 2.5px 0px;
-}
-
-#ftitem1 {
-    text-align: center;
-    font-size: 20px;
-    min-width: 100%;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-  
-/* The navigation menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-  
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-  
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-  
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left .5s;
-    padding: 0px 0px 0px 0px;
-}
-  
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+  text-align: right;
+  min-width: 20%;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; 
-    flex-grow: 1;
-    justify-content: space-evenly;
-    align-items: stretch;
-    background-color: #0483ad;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #0483ad;
 }
 
 .content > div {
-    background: coral;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 1rem;
-    margin: 10px 10px;
-    color: white;
-    min-height: 200px;
-    min-width: 200px;
-    border: 1px ridge red;
+  background: coral;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 1rem;
+  margin: 10px 10px;
+  color: white;
+  min-height: 200px;
+  min-width: 200px;
 }
 
 .content > div > p {
-    margin: 0;
+  margin: 0;
 }
 
-#index {
-    flex-direction: row;
-    justify-content: space-evenly;
+#footer {
+  background-color: #0003cc;
+  padding: 2.5px 0px 2.5px 0px;
 }
 
-
-
-/* .menu {
-    display: none;
+#ftitem1 {
+  text-align: center;
+  font-size: 20px;
+  min-width: 100%;
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-  
-.menu a {
-    display: flex;
+/* .education {
     flex-direction: column;
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #33b5e5;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.menu a:hover {
-    background-color: #052db1;
-}
-
-.menu a:link {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.menu a:visited {
-    color: #ffffff;
-}
-
-.menu .active {
-    background-color: darkblue;
-} 
-
-.education {
-    flex-direction: column;
-}
-
-.contact {
-    flex-direction: row;
 } */
 
+/* .contact {
+    flex-direction: row;
+} */
 
 /* .row::after {
     content: "";
@@ -213,7 +161,7 @@ html, body {
     padding: 15px;
     width: 100%;
 } */
-   
+
 /* @media only screen and (min-width: 768px) {
     .row {min-height: 88vh;}
     .content {min-height: 88vh;}
