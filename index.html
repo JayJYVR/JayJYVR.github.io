@@ -15,7 +15,7 @@
 
 <body>
     <div id="mySidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" id="closebtn" onclick="">&times;</a>
         <a class="active" href="./index.html">Home</a>
         <a href="./pages/calendar.html">Calendar</a>
         <a href="./pages/bookmarks.html">Bookmarks</a>
@@ -28,11 +28,11 @@
     </div>
     <div id="visible">
         <div id="header">
-            <div id="hditem1"><a href="javascript:void(0)" onclick="openNav()">Menu</a></div>
+            <div id="hditem1"><a href="javascript:void(0)" onclick="">Menu</a></div>
             <div id="hditem2">Welcome</div>
             <div id="hditem3"><a href="./pages/contact.html">Contact</a></div>
         </div>
-        <div class="content" id="index" onclick="closeNav()">
+        <div class="content" id="content" onclick="">
             <div>
                 <p>Sample Content</p>
             </div>
@@ -68,7 +68,7 @@
             <a id="ftitem1" href="./pages/contact.html">Jason Haug 2021</a>
         </div>
     </div>
-    <script src="dist/ssm.min.js"></script>
+    <script src="./node_modules/simplestatemanager/dist/ssm.min.js"></script>
     <script src="./js/sidebar.js"></script>
 </body>
 

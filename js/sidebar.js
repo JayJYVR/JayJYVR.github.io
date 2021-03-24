@@ -1,4 +1,15 @@
-function openNav() {
+ssm.addState({
+  id: 'desktop',
+  query: '(min-width: 768px)',
+  onEnter: function() {
+    console.log('enter desktop');
+    document.getElementById("content").setAttribute('onclick','closeNavDesk()');
+    document.getElementById("hditem1").setAttribute('onclick','openNavDesk()');
+    document.getElementById("closebtn").setAttribute('onclick','closeNavDesk()');
+  }
+});
+
+function openNavDesk() {
   document.getElementById("mySidenav").style.width = "20%";
   document.getElementById("visible").style.marginLeft = "20%";
   document.getElementById("visible").style.width = "80%";
@@ -8,7 +19,7 @@ function openNav() {
   document.getElementById("footer").style.backgroundColor = "#0003cc65";
 }
 
-function closeNav() {
+function closeNavDesk() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("visible").style.marginLeft = "0";
   document.getElementById("visible").style.width = "100%";
