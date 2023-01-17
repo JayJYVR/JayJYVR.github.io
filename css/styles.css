@@ -113,9 +113,7 @@ html, body {
     border-radius: 1rem;
     margin: 5px;
     color: white;
-    flex-grow: 1;
     min-width: 25%;
-    max-height: 400px;
     text-align: center;
 }
 
