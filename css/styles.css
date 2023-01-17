@@ -27,7 +27,7 @@ html, body {
     padding: 15px;
     width: 100%;
 }
-  
+
 @media only screen and (min-width: 768px) {
     .menu {min-height: 83vh;}
     .content {min-height: 83vh;}
@@ -63,7 +63,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
-  
+
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
@@ -115,6 +115,7 @@ html, body {
     color: white;
     flex-grow: 1;
     min-width: 25%;
+    max-height: 500px;
     text-align: center;
 }
 
