@@ -115,7 +115,7 @@ html, body {
     color: white;
     flex-grow: 1;
     min-width: 25%;
-    max-height: 500px;
+    max-height: 400px;
     text-align: center;
 }
 
