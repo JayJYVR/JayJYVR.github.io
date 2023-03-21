@@ -1,41 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Site for Learning">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Jason Haug">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Learning Web Development</title>
-</head>
-
-<body>
-<div id="wrapper">
-    <div class="header">
-        <h1>Western Canada Web Design and Development</h1>
-    </div>
-    <div class="row">
-        <div class="col-2 menu">
-            <ul>
-                <a class=active href="index.html"><li>Home</li></a>
-                <!-- <a href="./pages/blog.html"><li>Blog</li></a> -->
-                <a href="./pages/contact.html"><li>Contact</li></a>
-            </ul>
-        </div>
-        <div class="col-10 content">
-            <div class="inside index">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div>
-</div>
-    <div id="footer">
-        Jason 2022 
-    </div>
-</body>
-</html> 
+<!-- index.html -->
+<html>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+      ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app);
+    </script>
+  </body>
+</html>
